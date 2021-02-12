@@ -62,7 +62,7 @@ export default {
         border-radius: 4px;
         color: #fff;
     }
-    .post-category{
+    .post-category {
         background-color: #c52828;
         padding: 6px 10px;
         border-radius: 4px;

@@ -11,7 +11,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="side-bar">
-                        <blog-side-bar/>
+                        <blog-side-bar />
                     </div>
                 </div>
             </div>
@@ -19,18 +19,17 @@
     </div>
 </template>
 <script>
-import BlogPosts from '../components/Blog/BlogPosts.vue';
-import BlogSideBar from '../components/Blog/BlogSideBar.vue';
+import BlogPosts from "../components/Blog/BlogPosts.vue";
+import BlogSideBar from "../components/Blog/BlogSideBar.vue";
 
 export default {
-  components: { BlogPosts, BlogSideBar },
+    components: { BlogPosts, BlogSideBar },
     data: function() {
         return {
             pageName: "Blog",
             pageDesc: "This is blog page"
         };
     },
-    name: "blog",
-    
+    name: "blog"
 };
 </script>
