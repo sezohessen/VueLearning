@@ -14,6 +14,13 @@ export default {
             pageDesc: "This is about us page"
         };
     },
-    name: "about"
+    name: "about",
+   /*  directives: {
+        bold: {
+            bind: el => {
+                el.style.fontWeight = "bold";
+            }
+        }
+    } */
 };
 </script>
