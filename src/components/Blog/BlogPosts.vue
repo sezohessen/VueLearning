@@ -1,35 +1,35 @@
 <template>
     <div class="post-box">
-        <span class="post-views">120</span>
-        <h3 class="post-title">Blog post title</h3>
-        <span class="post-date">1-1-2021</span>
+        <span class="post-views">{{ views }}</span>
+        <h3 class="post-title">{{ title }}</h3>
+        <span class="post-date">{{ date }}</span>
         <p class="post-constant">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi
-            quae, deserunt illum tempora adipisci ex quas vitae blanditiis,
-            quaerat consectetur placeat facilis? Doloremque velit quibusdam
-            cupiditate similique magni id aliquid.
+            {{content}}
         </p>
         <div class="row">
             <div class="col-md-6">
-                <span class="post-author">Post author</span>
+                <span class="post-author">{{author}}</span>
             </div>
             <div class="col-md-6 text-right">
-                <span class="post-category">Category Name</span>
+                <span class="post-category">{{ category }}</span>
             </div>
         </div>
     </div>
 </template>
 <script>
 export default {
+    props:['views','title','date','content','author','category'],
     name: "post"
 };
 </script>
 <style lang="scss" scoped>
 .post-box {
-    padding: 15px;
+    margin-bottom: 20px;
+    padding: 20px;
     background-color: #fff;
     box-shadow: 0 0 10px #ddd;
     position: relative;
+    border-radius: 2px;
     text-align: left;
     .post-views {
         position: absolute;

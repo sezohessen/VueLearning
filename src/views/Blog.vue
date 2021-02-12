@@ -6,7 +6,16 @@
             <div class="row">
                 <div class="col-md-8">
                     <div class="posts-area">
-                        <blog-posts />
+                        <blog-posts
+                            v-for="post in posts"
+                            :key="post.id"
+                            :views="post.views"
+                            :title="post.title"
+                            :date="post.date"
+                            :content="post.content"
+                            :category="post.category"
+                            :author="post.author"
+                        />
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -19,15 +28,16 @@
     </div>
 </template>
 <script>
-import BlogPosts from "../components/Blog/BlogPosts.vue";
-import BlogSideBar from "../components/Blog/BlogSideBar.vue";
-
+import BlogPosts from "@/components/Blog/BlogPosts.vue";
+import BlogSideBar from "@/components/Blog/BlogSideBar.vue";
+import JsonPosts from "../json/blogs.json";
 export default {
     components: { BlogPosts, BlogSideBar },
     data: function() {
         return {
             pageName: "Blog",
-            pageDesc: "This is blog page"
+            pageDesc: "This is blog page",
+            posts: JsonPosts
         };
     },
     name: "blog"
